@@ -1,0 +1,10 @@
+# GET http://localhost:3000/api/v1/users
+POST http://localhost:3000/api/v1/users
+content-type: application/json
+
+{
+ "name":"ahmed abouwarda",
+ "username": "svegsdacr78264157bger9t",
+ "email":"aa@aaa.com",
+ "password":"AEssdv$w34f"
+}
