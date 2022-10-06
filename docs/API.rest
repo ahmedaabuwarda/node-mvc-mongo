@@ -1,0 +1,60 @@
+###### user token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzMwYWJhMGYyNzRhMjE0MGVkYjA2NjQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYUBhYS5jb20iLCJpYXQiOjE2NjUwNjIxODIsImV4cCI6MTY2NTY2Njk4Mn0.LY9-g1NCbQtD8vDfu-ogE1AZS1fTb-Bw-z0vAhMfGCU
+
+###### admin token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzNlYWZkMWZjYmZmYTU0Njc2Y2Q5OTgiLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFhQGFhLmNvbSIsImlhdCI6MTY2NTA1ODY5NSwiZXhwIjoxNjY1NjYzNDk1fQ.m9OWIvU1InmRgc5LqkwV0zyckEcwJg4T4f1dqyBY01U
+
+###### get all users
+GET http://localhost:3000/api/v1/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzMwYWJhMGYyNzRhMjE0MGVkYjA2NjQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYUBhYS5jb20iLCJpYXQiOjE2NjUwNjIxODIsImV4cCI6MTY2NTY2Njk4Mn0.LY9-g1NCbQtD8vDfu-ogE1AZS1fTb-Bw-z0vAhMfGCU
+
+###### get a users by id
+GET http://localhost:3000/api/v1/users/6330aba0f274a2140edb0664
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzMwYWJhMGYyNzRhMjE0MGVkYjA2NjQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYUBhYS5jb20iLCJpYXQiOjE2NjUwNjIxODIsImV4cCI6MTY2NTY2Njk4Mn0.LY9-g1NCbQtD8vDfu-ogE1AZS1fTb-Bw-z0vAhMfGCU
+
+###### delete user by id
+DELETE http://localhost:3000/api/v1/users/6330aba0f274a2140edb0664
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzMwYWJhMGYyNzRhMjE0MGVkYjA2NjQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYUBhYS5jb20iLCJpYXQiOjE2NjUwNjIxODIsImV4cCI6MTY2NTY2Njk4Mn0.LY9-g1NCbQtD8vDfu-ogE1AZS1fTb-Bw-z0vAhMfGCU
+
+###### update user by id
+PUT http://localhost:3000/api/v1/users/633eafd1fcbffa54676cd998
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzMwYWJhMGYyNzRhMjE0MGVkYjA2NjQiLCJyb2xlIjoidXNlciIsImVtYWlsIjoiYUBhYS5jb20iLCJpYXQiOjE2NjUwNjIxODIsImV4cCI6MTY2NTY2Njk4Mn0.LY9-g1NCbQtD8vDfu-ogE1AZS1fTb-Bw-z0vAhMfGCU
+Accept: application/json
+
+{
+    "email":"a@aa.com"
+}
+
+###### create new user
+POST http://localhost:3000/api/v1/users
+content-type: application/json
+
+{
+ "name":"ahmed abouwarda",
+ "username": "vegsdacr7826415bger9t",
+ "email":"a@aa.com",
+ "password":"AEssdv$w34f"
+}
+
+###### register
+POST http://localhost:3000/api/v1/register
+content-type: application/json
+
+{
+ "name":"ahmed abouwarda",
+ "username": "vxegsdacr7826415bger9t",
+ "email":"aa@aa.com",
+ "password":"AEssdv$w34f"
+}
+
+###### login
+POST http://localhost:3000/api/v1/login
+content-type: application/json
+
+{
+ "email":"a@aa.com",
+ "password":"AEssdv$w34f"
+}
+
+###### logout
+POST http://localhost:3000/api/v1/logout
