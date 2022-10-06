@@ -1,0 +1,20 @@
+{
+    "AUTH_ADMIN_01":"Unauthorized admin only, AUTH_ADMIN_01",
+    "AUTH_USER_01":"Unauthorized user only, AUTH_USER_01",
+    "AUTH_ADMIN_OR_USER_01":"Unauthorized user or admin only, AUTH_ADMIN_OR_USER_01",
+    
+    "AUTH_GET_01":"forbidden access, AUTH_GET_01",
+    "AUTH_POST_01":"forbidden access, AUTH_POST_01",
+    
+    "USER_GET_01":"forbidden access, USER_GET_01",
+    "USER_GET_02":"forbidden access, USER_GET_02",
+    
+    "USER_POST_01":"forbidden access, USER_POST_01",
+    "USER_POST_02":"forbidden access, USER_POST_02",
+
+    "USER_PUT_01":"forbidden access, USER_PUT_01",
+    "USER_PUT_02":"forbidden access, USER_PUT_02",
+
+    "USER_DELETE_01":"forbidden access, USER_DELETE_01",
+    "USER_DELETE_02":"forbidden access, USER_DELETE_02"
+}
