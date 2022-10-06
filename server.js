@@ -53,7 +53,7 @@ app.use((err, req, res, next) => {
   } else {
     res.status(500).send({
       status: false,
-      message: '500 Internal Server Error',
+      error: '500 Internal Server Error',
     });
   }
 });
