@@ -31,9 +31,13 @@ exports.findById = async (req) => {
 // create a new user
 exports.create = async (req) => {
   req.body.password = await bcrypt.hash(
-    req.body.password,
+    req?.body?.password,
     await bcrypt.genSalt(10)
   );
+  const user = req?.user;
+  if (req?.body?.role === 'admin' && user?.role === 'admin') {
+    req.body.role = 'admin';
+  }
   return await userModel.create(req.body);
 };
 
@@ -42,7 +46,8 @@ exports.create = async (req) => {
 exports.update = async (req) => {
   const user = req?.user;
   const id = req?.params?.id;
-  const { username, email, password } = req.body;
+  let { username, email, password } = req.body;
+  password = await bcrypt.hash(password, await bcrypt.genSalt(10));
   if (user.role === 'admin' || (user.role === 'user' && user._id === id)) {
     return await userModel.updateOne(
       { _id: id },

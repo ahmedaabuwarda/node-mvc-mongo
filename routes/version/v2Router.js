@@ -10,5 +10,5 @@ v2Router.use(authenticateRouter);
 // use userRouter to handle /users
 v2Router.use('/users', userRouter);
 
-// export v2Router
+// export v1Router
 module.exports = v2Router;

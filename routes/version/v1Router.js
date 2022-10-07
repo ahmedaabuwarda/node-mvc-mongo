@@ -3,7 +3,7 @@ const express = require('express');
 const userRouter = require('../v1/userRouter.js');
 // import authenticateRouter
 const authenticateRouter = require('../v1/authenticateRouter.js');
-// create and export v2Router
+// create and export v1Router
 const v1Router = express.Router();
 // use authentication router
 v1Router.use(authenticateRouter);

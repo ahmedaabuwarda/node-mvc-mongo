@@ -1,39 +1,37 @@
-const userModel = require('../../models/v1/userModel.js');
+const userService = require('../../services/v2/userService.js');
 
 // route /api/v1/users
 // get all users from db
 exports.index = async (req, res, next) => {
-  const users = await userModel.find();
-  return res.json(users);
+  return res.json(await userService.find(req));
 };
 
 // route /api/v1/users/:id
 // get specific users from db using id
 exports.show = async (req, res, next) => {
-  const user_id = req.params.id;
-  const user = await userModel.findById(user_id);
-  return res.json(user);
+  return res.json(await userService.findById(req));
 };
 
-// route /api/v1/users
+// route /api/v1/users && /api/v1/register
 // create a new user
-exports.store = async (req, res, next) => {
-  const user = await userModel.create(req.body);
-  return res.status(201).json(user);
+exports.create = async (req, res, next) => {  
+  return res.status(201).json(await userService.create(req));
 };
 
 // route /api/v1/users/:id
 // update a user using id
 exports.update = async (req, res, next) => {
-  const user_id = req.params.id;
-  const user = await userModel.update(user_id, req.body);
-  return res.status(200).json(user);
+  return res.status(200).json(await userService.update(req));
 };
 
 // route /api/v1/users/:id
 // delete a user using id
-exports.delete = async (req, res, next) => {
-  const user_id = req.params.id;
-  const user = await userModel.remove(user_id);
-  return res.status(200).json(user);
+exports.remove = async (req, res, next) => {
+  return res.status(200).json(await userService.remove(req));
+};
+
+// route /api/v1/login
+// login a user
+exports.login = async (req, res, next) => {
+  return res.json(await userService.login(req));
 };
