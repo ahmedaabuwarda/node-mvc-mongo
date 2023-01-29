@@ -8,6 +8,8 @@ services:
       - mongodb
     environment:
       MONGO_URL: mongodb://mongodb:${DB_PORT}/${DB_NAME}
+    volumes:
+      - .:/usr/src/app
   mongodb:
     image: mongo:5
     ports:
